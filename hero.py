@@ -1,4 +1,6 @@
 class Hero:
     """The hero blueprint will be implemented later in the project."""
 
-    pass
+    def __init__(self, name):
+          # Create the Hero's attributes here.
+          
