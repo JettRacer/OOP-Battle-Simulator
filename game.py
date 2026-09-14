@@ -11,10 +11,12 @@ def main():
     print("The gates are opening...")
 
     goblin = Goblin("Bumbo")
-
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
-    print("But no hero has answered the call... yet.")
 
+    secondGoblin = Goblin("Scribble")
+    print(f"{secondGoblin.name} enters the arena with {secondGoblin.health} health.")
+    
+    print("But no hero has answered the call... yet.")
 
 if __name__ == "__main__":
     main()
