@@ -3,6 +3,20 @@ from hero import Hero
 
 ARENA_NAME = "The Ferrum Circle"
 
+def battle(hero: Hero, enemy: Goblin):
+    while hero.is_alive() and enemy.is_alive():
+        hero_damage = hero.attack()
+        enemy.take_damage(hero_damage)
+
+        if enemy.is_alive():
+            enemy_damage = enemy.attack()
+            hero.take_damage(enemy_damage)
+    if hero.is_alive():
+        print(f"{hero.name} wins!")
+    else:
+        print(f"{enemy.name} wins!")
+
+
 
 def main():
     """Open the arena and introduce its first opponent."""
@@ -15,8 +29,12 @@ def main():
 
     secondGoblin = Goblin("Scribble")
     print(f"{secondGoblin.name} enters the arena with {secondGoblin.health} health.")
-    
-    print("But no hero has answered the call... yet.")
+
+    FightMaster = Hero("FightMaster")
+    print(f"{FightMaster.name} enters the arena with {FightMaster.health} health.")
+
+    battle(FightMaster,goblin)
+
 
 if __name__ == "__main__":
     main()
