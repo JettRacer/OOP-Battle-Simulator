@@ -1,5 +1,6 @@
 from goblin import Goblin
 from hero import Hero
+from boss import BOSS
 
 ARENA_NAME = "The Ferrum Circle"
 
@@ -33,7 +34,12 @@ def main():
     FightMaster = Hero("FightMaster")
     print(f"{FightMaster.name} enters the arena with {FightMaster.health} health.")
 
-    battle(FightMaster,goblin)
+    boss = BOSS("ScaryLarry")
+    print("Boss has entered the battle")
+
+
+
+    battle(FightMaster,boss)
 
 
 if __name__ == "__main__":
